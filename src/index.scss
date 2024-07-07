@@ -1,0 +1,56 @@
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+@import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
+
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--0: #242a2e;
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: #d6dee0;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", san-serif;
+  min-height: 100vh;
+  color: var(--color-light--3);
+  background: var(--color-dark--0);
+  border: 2.5rem solid;
+  line-height: 1.6;
+  color: var(--color-light--2);
+}
+
+.cta-link {
+  padding: .8rem 1.6rem;
+  background: var(--color-brand--2);
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  border: 1px solid;
+
+  &:hover{
+    color: var(--color-light--1);
+    background: transparent;
+    border: 1px solid;
+  }
+}
+

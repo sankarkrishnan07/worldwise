@@ -1,0 +1,59 @@
+.btn {
+  padding: 1rem 2rem;
+  background: var(--color-brand--2);
+  border-radius: 10px;
+  border: 1px solid;
+  cursor: pointer;
+
+  &:hover {
+    background: transparent;
+    border-radius: 1px solid;
+    color: #fff;
+  }
+}
+
+:global(button.delete) {
+  height: 1rem;
+  aspect-ratio: 1;
+  padding: 1rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: var(--color-dark--1);
+  border: none;
+
+  &:hover {
+    background: var(--color-brand--1);
+    color: #000;
+  }
+}
+
+:global(button.logout) {
+  background: var(--color-dark--2);
+  color: #fff;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 0 0 0.5px;
+  }
+}
+
+:global(button.location) {
+  background: var(--color-brand--2);
+  color: #000;
+  border: none;
+  position: absolute;
+  bottom: 3rem;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 0 0 0.5px;
+    background: var(--color-dark--1);
+  }
+}

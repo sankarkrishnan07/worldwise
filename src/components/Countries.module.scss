@@ -1,0 +1,18 @@
+.country {
+  &List {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80%;
+    font-size: 1.5rem;
+  }
+
+  &Item {
+    padding: 2rem;
+    background: var(--color-dark--2);
+    border-radius: 1rem;
+    border-left: 4px solid var(--color-brand--2);
+    display: flex;
+    gap: 2rem;
+  }
+}

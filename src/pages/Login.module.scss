@@ -1,0 +1,38 @@
+.login {
+    padding: 3rem 5rem;
+    min-height: calc(100vh - 5rem);
+
+    &Form{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin: 10rem auto;
+        font-size: 1.5rem;
+        flex-direction: column;
+        padding: 3rem;
+        background: var(--color-dark--1);
+        border-radius: 1rem;
+        gap: 2rem;
+        color: var(--color-light--3);
+        max-width: 50rem;
+
+        &Input {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            width: 100%;
+
+            input {
+                border-radius: .5rem;
+                height: 4rem;
+                padding: 1rem;
+                font-size: 1.5rem;
+                background: var(--color-light--3);
+
+                &:focus {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}

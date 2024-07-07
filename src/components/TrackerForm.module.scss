@@ -1,0 +1,47 @@
+.trackerForm {
+  padding: 2rem 3rem;
+  background: var(--color-dark--1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 40rem;
+
+  &__input {
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    &-label{
+      color: var(--color-light--1);
+    }
+
+    &-text,
+    &-textArea {
+      height: 4rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      background: var(--color-dark--2);
+      font-size: 1.6rem;
+      color: var(--color-light--2);
+    }
+
+    &-textArea {
+      height: 6rem;
+    }
+  }
+
+  &__btn-wrap {
+    margin-top: .5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.loading{
+  opacity: .3;
+}

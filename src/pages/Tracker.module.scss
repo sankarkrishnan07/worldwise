@@ -1,0 +1,22 @@
+.tracker {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+
+    &Wrap{
+        display: flex;
+        height: calc(100vh - 5rem);
+    }
+
+    &Details {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        height: 60vh;
+        width: 100%;
+    }
+}

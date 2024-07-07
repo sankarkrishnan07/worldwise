@@ -1,0 +1,30 @@
+.pageNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &List {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &Item:not(:last-child) {
+    a {
+      color: var(--color-light--2);
+      box-shadow: 0 2px transparent;
+      transition: all .2s;
+
+      &:hover {
+        box-shadow: 0 2px currentColor;
+      }
+    }
+
+    :global(a.active) {
+      box-shadow: 0 4px currentColor;
+    }
+  }
+}

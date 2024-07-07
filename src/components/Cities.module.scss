@@ -1,0 +1,35 @@
+.city {
+  &List {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    font-size: 1.4rem;
+  }
+
+  &Item {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-dark--2);
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid var(--color-brand--2);
+    color: var(--color-light--2);
+
+    &Name {
+      margin-right: auto;
+    }
+
+    &-active {
+      border: 1px solid var(--color-brand--2);
+      border-left: 4px solid var(--color-brand--2);
+    }
+  }
+}
+
+.citiesItem-active {
+  border: 1px solid var(--color-brand--2);
+  border-left: 4px solid var(--color-brand--2);
+}

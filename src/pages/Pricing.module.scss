@@ -1,0 +1,35 @@
+.pricing {
+  padding: 3rem 5rem;
+  min-height: calc(100vh - 5rem);
+
+  &Content {
+    max-width: 40rem;
+
+    &Wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 6rem auto;
+      gap: 7rem;
+    }
+  }
+
+  &Title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  &Para {
+    font-size: 1.5rem;
+    color: var(--color-light--2);
+  }
+
+  &Img {
+    height: 40rem;
+
+    img {
+      height: 100%;
+    }
+  }
+}
