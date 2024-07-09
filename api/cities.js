@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const filePath = path.join(process.cwd(), "src/data", "cities.json");
+const writePath = path.join("/tmp", "cities.json");
 
 export default function handler(req, res) {
   const method = req.method;
@@ -15,7 +16,7 @@ export default function handler(req, res) {
 
   // Write to the JSON file
   const writeJsonFile = (data) => {
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    fs.writeFileSync(writePath, JSON.stringify(data, null, 2));
   };
 
   try {
