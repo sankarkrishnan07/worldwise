@@ -54,10 +54,13 @@ function CitiesProvider({ children }) {
     async function getCities() {
       dispatch({ type: "loading" });
       try {
-        const res = await fetch("http://localhost:9000/cities");
+        const res = await fetch("https://sk-worldwise.vercel.app/api/cities");
         if (!res.ok) throw new Error("Something went wrong");
         const data = await res.json();
-        dispatch({ type: "cities/loaded", payLoad: data });
+        dispatch({
+          type: "cities/loaded",
+          payLoad: Array.isArray(data) ? data : data.cities,
+        });
       } catch (error) {
         dispatch({ type: "rejected", payLoad: error.message });
       }
@@ -69,7 +72,9 @@ function CitiesProvider({ children }) {
   const getCity = useCallback(async function getCity(id) {
     dispatch({ type: "loading" });
     try {
-      const res = await fetch(`http://localhost:9000/cities/${id}`);
+      const res = await fetch(
+        `https://sk-worldwise.vercel.app/api/cities?id=${id}`
+      );
       if (!res.ok) throw new Error("Something went wrong");
       const data = await res.json();
       dispatch({ type: "city/loaded", payLoad: data });
@@ -81,7 +86,7 @@ function CitiesProvider({ children }) {
   async function createCity(newCity) {
     dispatch({ type: "loading" });
     try {
-      const res = await fetch(`http://localhost:9000/cities`, {
+      const res = await fetch(`https://sk-worldwise.vercel.app/api/cities`, {
         method: "POST",
         body: JSON.stringify(newCity),
         headers: {
@@ -99,9 +104,12 @@ function CitiesProvider({ children }) {
   async function deleteCity(id) {
     dispatch({ type: "loading" });
     try {
-      const res = await fetch(`http://localhost:9000/cities/${id}`, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `https://sk-worldwise.vercel.app/api/cities?=${id}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (!res.ok) throw new Error("Something went wrong");
       dispatch({ type: "city/deleted", payLoad: id });
     } catch (error) {
