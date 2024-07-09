@@ -105,7 +105,7 @@ function CitiesProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       const res = await fetch(
-        `https://sk-worldwise.vercel.app/api/cities?=${id}`,
+        `https://sk-worldwise.vercel.app/api/cities?id=${id}`,
         {
           method: "DELETE",
         }
